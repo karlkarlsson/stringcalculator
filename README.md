@@ -1,3 +1,5 @@
+This is my solution. My name is Karl.
+
 # TDD Exercise
 ## Purpose
 Learn to use Test Driven Development to create a program.
