@@ -1,0 +1,85 @@
+[33mcommit 8effe3f07b905adf93bc7d5c5a2e70888771ce1f[m
+Author: Karl Ingi Karlsson <karlk13@i-7f3b5dd9.csd07cloud.internal>
+Date:   Tue Oct 13 21:51:57 2015 +0000
+
+    Forked and cloned project. Fixed paths of build scripts. Added .swp to gitignore
+
+[33mcommit 9b32128c4e24abf725b6ba78b4e2549c0454f7cb[m
+Author: Hannes Petursson <hap@i-84f52d0b.greenqloud.internal>
+Date:   Sat Oct 11 11:49:41 2014 +0000
+
+    Added check to create classes folder
+
+[33mcommit 1cb39adaf5b99f3eb6ffe3cc3861d6cc4badba98[m
+Author: Hannes Petursson <hannes@gagnavarslan.is>
+Date:   Sat Oct 11 11:21:56 2014 +0000
+
+    Add solution first steps
+
+[33mcommit a719bcc47fd308672a885aff66331ce9015b4185[m
+Author: Hannes Petursson <hannes@gagnavarslan.is>
+Date:   Sat Oct 11 11:20:39 2014 +0000
+
+    Refactor code
+
+[33mcommit 49a3b7c4d41da88d798048d4f4a6726f6ae39b7f[m
+Author: Hannes Petursson <hannes@gagnavarslan.is>
+Date:   Sat Oct 11 11:19:19 2014 +0000
+
+    Test multiple numbers
+
+[33mcommit d994736fb0d02f7f53ae49ecf4e23c85bbee3652[m
+Author: Hannes Petursson <hannes@gagnavarslan.is>
+Date:   Sat Oct 11 11:13:51 2014 +0000
+
+    Updated build scripts to support linux
+
+[33mcommit d6baa4393d9b89c813afc92423c729b8c6d1e5f2[m
+Author: Hannes Petursson <hannes@gagnavarslan.is>
+Date:   Sat Oct 11 11:12:37 2014 +0000
+
+    Added lib dir with junit dependencies
+
+[33mcommit f089e4fff3f8fd6b2206dd3b54f612fab1e6c9f6[m
+Author: hap2000 <hap@ru.is>
+Date:   Sat Oct 11 11:00:33 2014 +0000
+
+    Update README.md
+    
+    Add exercise description to readme file
+
+[33mcommit 23fff00784fbdd0f46097bbb811d8027b288f8cb[m
+Author: hap2000 <hap@ru.is>
+Date:   Thu Oct 9 10:18:49 2014 +0000
+
+    Test two numbers
+
+[33mcommit 66211f1c4df254054d8ecc449e29f70d02933020[m
+Author: hap2000 <hap@ru.is>
+Date:   Thu Oct 9 10:07:06 2014 +0000
+
+    Added test for one number
+
+[33mcommit adbf6b4c7d5b37373838236085c71bee14b51bb1[m
+Author: hap2000 <hap@ru.is>
+Date:   Thu Oct 9 10:02:29 2014 +0000
+
+    Added build script files
+
+[33mcommit 4f4b8940ae8087d488cbc02b037c44cdb8f65f07[m
+Author: hap2000 <hap@ru.is>
+Date:   Thu Oct 9 10:01:59 2014 +0000
+
+    Created first test empty string
+
+[33mcommit ca5621587048ded4623671292e7e343df869e2f3[m
+Author: Hannes Petursson <hannes@gagnavarslan.is>
+Date:   Wed Oct 8 21:44:25 2014 +0000
+
+    Create skeleton for Calculator and Test
+
+[33mcommit b8827507938a5ded33cbfc3f7174310efcc9b196[m
+Author: hap2000 <hap@ru.is>
+Date:   Wed Oct 8 21:13:01 2014 +0000
+
+    Initial commit
