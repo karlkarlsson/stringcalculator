@@ -1,6 +1,7 @@
 package is.ru.stringcalculator;
 
 import static java.lang.System.out;
+import java.util.Stack;
 
 public class Calculator {
 
@@ -12,10 +13,9 @@ public class Calculator {
             if(text.startsWith("//")){
                 if (text.charAt(2) == '[') {
                     int count = findInputStart(text);
-                    System.out.println("Count: " + count);
-                    String delimiter = findStringDelimiter(text);
+                    Stack<String> delimiters = findStringDelimiters(text);
                     String subText = text.substring(count);
-                    return sum(splitNumbers(subText, delimiter));    
+                    return sum(splitNumbers(subText, delimiters));    
                 }
                 else {
                     char delimiter = findDelimiter(text);
@@ -51,26 +51,40 @@ public class Calculator {
         String regSplit = ",|\n|" + delimiter;
         return numbers.split(regSplit);
 	}
-    
+
 	private static String[] splitNumbers(String numbers, String delimiter){
         String regSplit = ",|\n|" + delimiter;
         return numbers.split(regSplit);
 	}
 
+    private static String[] splitNumbers(String numbers, Stack<String> delimiters){
+        String regSplit = ",|\n";
+        while (!delimiters.empty()) {
+            regSplit = regSplit + "|" + delimiters.pop();
+        }
+        return numbers.split(regSplit);
+    }
+
     private static char findDelimiter(String text){
         return text.charAt(2);
     }
  
-    private static String findStringDelimiter(String text){
+    private static Stack<String> findStringDelimiters(String text){
         String delimiter = "";
+        Stack<String> delimiters = new Stack<String>();
         boolean add = false;
-        for (int i = 0; i < text.length(); i++) {
+        for(int i = 0; i < text.length(); i++) {
             if (text.charAt(i) == '[') {
                 add = true;
                 continue;
             }
-            if (text.charAt(i) == ']') {
+            else if (text.charAt(i) == ']') {
+                delimiters.push(delimiter);
+                delimiter = "";
                 add = false;
+                continue;
+            }
+            else if (text.charAt(i) == '\n') {
                 break;
             }
             if (add) {
@@ -80,9 +94,9 @@ public class Calculator {
                 else {
                     delimiter = delimiter + "\\" + text.charAt(i);
                 }
-            }   
+            }
         }
-        return delimiter;
+        return delimiters;
     }
 
     public static boolean isLegal(char c){
