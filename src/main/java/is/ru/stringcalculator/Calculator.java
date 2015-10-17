@@ -35,15 +35,25 @@ public class Calculator {
 	}
     
     private static char findDelimiter(String text){
-        // System.out.println("TEST : " + text.charAt(2));
         return text.charAt(2);
     }
 
     private static int sum(String[] numbers){
  	    int total = 0;
+        boolean neg = false;
+        String negative = "Negatives not allowed: ";
         for(String number : numbers){
-		    total += toInt(number);
+		    int intNumber = toInt(number);
+            if (intNumber < 0) {
+                negative = negative + number + ",";
+                neg = true;
+            }
+            total += toInt(number);
 		}
-		return total;
+        if (neg) {
+            negative = negative.substring(0, negative.length()-1);
+            throw new IllegalArgumentException(negative);
+        }
+        return total;
     }
 }
