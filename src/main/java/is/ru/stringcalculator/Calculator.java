@@ -48,7 +48,9 @@ public class Calculator {
                 negative = negative + number + ",";
                 neg = true;
             }
-            total += toInt(number);
+            else if (intNumber < 1000) {
+                total += toInt(number);
+            }
 		}
         if (neg) {
             negative = negative.substring(0, negative.length()-1);

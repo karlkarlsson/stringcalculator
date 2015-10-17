@@ -50,12 +50,17 @@ public class CalculatorTest {
     }
 
     @Test
-    public void testExpectedException3() {
+    public void testExpectedException() {
         try {
             Calculator.add("2,-1,3,-5");
         } 
         catch (IllegalArgumentException e) {
             assertEquals("Negatives not allowed: -1,-5", e.getMessage());
         }
+    }
+
+    @Test
+    public void testNumbersOver1000() {
+        assertEquals(2, Calculator.add("1001,2"));
     }
 }
