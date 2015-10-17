@@ -73,4 +73,9 @@ public class CalculatorTest {
     public void testMultipleDelimiters() {
         assertEquals(6, Calculator.add("//[*][%]\n1*2%3"));
     }
+
+    @Test
+    public void testMultipleDelimiterVariableLength() {
+        assertEquals(21 , Calculator.add("//[>][plus][shialabeouf]\n1>2plus3,4\n5shialabeouf6"));
+    }
 }
